@@ -159,5 +159,17 @@ If you wish to see all containers even the ones which isn't running
 podman ps -a
 ```
 
-Expected output
+## Lab - Getting inside a running container shell
+```
+# Type this on your lab machine i.e ubuntu terminal
+podman ps
+podman exec -it nginx /bin/sh
 
+# Type thes commands inside the container shell
+ls
+hostname
+hostname -i
+
+# To come out of the container shell
+exit
+```
