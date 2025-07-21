@@ -116,3 +116,24 @@ To list the running containers
 ```
 podman ps
 ```
+
+## Lab - Podman image listing
+Podman images is the default 
+<pre>
+podman images
+</pre>
+
+List podman images with just the image ids
+```
+podman image ls --quiet
+```
+
+List all images without the heading
+```
+podman images --noheading
+```
+
+List all images with full image id
+```
+podman image list --no-tunc
+```
