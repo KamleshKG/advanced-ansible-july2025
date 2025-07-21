@@ -32,3 +32,23 @@ podman images
   - CRI-O Container Runtime
   - runC Container Runtime
 </pre>
+
+## Info - Container Images
+<pre>
+- Container Images are similar to Operating System ISO files we download from microsoft, ubuntu, etc.,
+- is a blueprint of a running container
+- all the necessary softwares can be installed while creating a image
+- using container image, we can create containers
+</pre>
+
+## Info - Containers
+<pre>
+- is running instance of a Container Image
+- it gets 
+  - it own IP Address
+  - it own Filesystem 
+  - network namespace
+    - network stack
+    - software defined network card ( NIC )
+  - its own port range ( 0 - 65535 )
+</pre>
