@@ -72,6 +72,10 @@ podman images
 - it follows client-server Architecture
   - client tool (docker)
   - server tool (dockerd - which runs a service)
+- docker images are stored in local registry folder /var/lib/docker
+- if any one user has downloaded a particular image, it is stored in the /var/lib/docker folder
+- when other users attempt to list the images, they will see all the images under /var/lib/docker
+- the containers created by one user will be visible to other users in the same linux machine
 </pre>
 
 ## Podman Overview
@@ -86,6 +90,8 @@ podman images
 - Red Hat developed Podman Container Engine and CRI-O Container Runtime
 - The ideas from rkt were in created CRI-O
 - Starting from Red Hat Openshift 4.x, Openshift stopped support for Docker, they moved to Podman instead
+- Podman stores container images for every user (isolated by users)
+- Podman containers created by one user is not visible to other users (isolated by users)
 </pre>
 
 ## Pod Overview
