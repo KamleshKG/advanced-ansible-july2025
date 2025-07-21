@@ -101,6 +101,11 @@ podman images
 - all the containers that belongs to a single Pod, they get to share the same Port Range ( 0 - 655535 )
 </pre>
 
+## Info - Podman Local Registry path
+<pre>
+/home/<your-linux-user>/.config/containers  
+</pre>
+
 ## Lab - Creating a container in Podman
 For downloading nginx image
 ```
