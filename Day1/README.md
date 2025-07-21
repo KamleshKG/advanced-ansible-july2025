@@ -87,3 +87,10 @@ podman images
 - The ideas from rkt were in created CRI-O
 - Starting from Red Hat Openshift 4.x, Openshift stopped support for Docker, they moved to Podman instead
 </pre>
+
+## Pod Overview
+<pre>
+- a logical group of many containers is called a Pod
+- all the containers that belongs to a single Pod, they get the same IP address
+- all the containers that belongs to a single Pod, they get to share the same Port Range ( 0 - 655535 )
+</pre>
