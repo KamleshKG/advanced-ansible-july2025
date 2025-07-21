@@ -221,4 +221,38 @@ podman rmi registry.fedoraproject.org/fedora:latest
 podman images
 ```
 
-## Lab - 
+## Lab - Creating a Pod in Podman
+The below command will a Pod with one hidden pause container
+```
+podman pod create nginx
+```
+
+Listing the pods
+```
+podman pod list
+```
+
+Listing the containers ( in case you wish to see the pause container created for the nginx pod )
+```
+podman ps -a
+```
+
+Let's add the nginx application container into the nginx pod
+```
+podman run -d --name nginx --pod nginx docker.io/nginx:latest
+```
+
+Let's list the containers
+```
+podman ps -a
+```
+
+Let's list the pods
+```
+podman pod list
+```
+
+Find more details about the pod
+```
+podman pod inspect nginx
+```
