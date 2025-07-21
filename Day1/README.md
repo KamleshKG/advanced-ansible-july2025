@@ -288,3 +288,27 @@ Deleting a Pod forcibly
 ```
 podman pod rm -f nginx
 ```
+
+
+## Lab - Creating a custom podman image
+Create a file named Dockerfile 
+```
+FROM docker.io/nginx:alpine
+
+COPY index.html /usr/share/nginx/html/index.html
+
+EXPOSE 80
+```
+
+Let's build the custom image
+```
+podman build -t mynginx:1.0 .
+```
+
+Now you may create a pod with your custom podman image
+```
+podman pod create my-nginx
+podman run -d --name my-nginx --pod my-nginx mynginx:1.0
+podman pod list
+podman pod inspect my-nginx
+```
