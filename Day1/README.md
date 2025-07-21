@@ -312,3 +312,31 @@ podman run -d --name my-nginx --pod my-nginx mynginx:1.0
 podman pod list
 podman pod inspect my-nginx
 ```
+
+## Lab - Replace a container from a Pod
+List the pods
+```
+podman pod list
+```
+
+List the containers
+```
+podman ps -a
+```
+
+Now let's delete the container
+```
+podman rm -f nginx 
+```
+
+Now if you list and see the pod containers count it will be minus 1
+```
+podman pod list
+```
+
+Now you may add a new container into the pod
+```
+podman run -d --name nginx --pod nginx docker.io/nginx:latest
+podman ps -a
+podman pod list
+```
