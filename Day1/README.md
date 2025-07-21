@@ -221,7 +221,7 @@ podman rmi registry.fedoraproject.org/fedora:latest
 podman images
 ```
 
-## Lab - Creating a Pod in Podman
+## Lab - Manage Pods in Podman
 The below command will a Pod with one hidden pause container
 ```
 podman pod create nginx
@@ -255,4 +255,36 @@ podman pod list
 Find more details about the pod
 ```
 podman pod inspect nginx
+```
+
+Stopping a running Pod
+```
+podman pod list
+podman pod stop nginx
+podman pod list
+```
+
+Start an exited Pod
+```
+podman pod list
+podman pod start nginx
+podman pod list
+```
+
+Restart a running Pod
+```
+podman pod list
+podman pod restart nginx
+podman pod list
+```
+
+Deleting a pod gracefully
+```
+podman pod stop nginx
+podman pod rm nginx
+```
+
+Deleting a Pod forcibly
+```
+podman pod rm -f nginx
 ```
