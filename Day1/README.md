@@ -179,6 +179,13 @@ exit
 podman exec nginx hostname -i
 ```
 
+## Lab - Deleting a running container
+```
+podman ps
+podman stop nginx
+podman rm nginx
+```
+
 ## Lab - Port Forwarding
 In the below command, port 8085 opens a up port in local machine, any request received at port 8085 will be forwared to the port 80 of nginx container.
 ```
