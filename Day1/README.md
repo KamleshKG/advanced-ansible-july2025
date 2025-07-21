@@ -82,7 +82,7 @@ podman images
 ![Docker](Docker-High-Level-Architecture.png)
 
 ## Podman - High Level Architecture
-<img width="50%" height="50%" alt="image" src="podman.webp" />
+<img width="50%" height="50%" alt="image" src="podman.webp" align="center" />
 ## Podman Overview
 <pre>
 - is an open source product 
