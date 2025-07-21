@@ -39,6 +39,11 @@ podman images
 - is a blueprint of a running container
 - all the necessary softwares can be installed while creating a image
 - using container image, we can create containers
+- every container image has an unique ID and name
+- it is broken down into many image layers
+- one container image may refer one or more image layers
+- each image layer has an unique ID
+- the image layers can be shared by container images
 </pre>
 
 ## Info - Containers
