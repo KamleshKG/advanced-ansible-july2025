@@ -79,7 +79,7 @@ podman images
 </pre>
 
 ## Docker - High Level Architecture
-![Docker]![Docker-High-Level-Architecture.png]
+![Docker](Docker-High-Level-Architecture.png)
 
 ## Podman Overview
 <pre>
