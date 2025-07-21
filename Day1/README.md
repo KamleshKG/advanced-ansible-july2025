@@ -97,6 +97,7 @@ podman images
 ## Pod Overview
 <pre>
 - a logical group of many containers is called a Pod
+- each container is a separate application process
 - all the containers that belongs to a single Pod, they get the same IP address
 - all the containers that belongs to a single Pod, they get to share the same Port Range ( 0 - 655535 )
 </pre>
@@ -219,3 +220,5 @@ podman rmi registry.fedoraproject.org/fedora:latest
 # List images after deleting
 podman images
 ```
+
+## Lab - 
