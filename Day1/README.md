@@ -144,3 +144,20 @@ podman image inspect <name of the container image>
 podman image inspect docker.io/library/nginx:latest
 ```
 
+## Lab - Create a container
+```
+podman run registry.fedoraproject.org/fedora:latest echo hello
+```
+
+Listing the running containers, you are not supposed to see the 
+```
+podman ps
+```
+
+If you wish to see all containers even the ones which isn't running
+```
+podman ps -a
+```
+
+Expected output
+
