@@ -36,6 +36,8 @@ podman images
 ## Info - Container Images
 <pre>
 - Container Images are similar to Operating System ISO files we download from microsoft, ubuntu, etc.,
+- technically it is possible to have more than one applicaiton per Container Image, but that is the best practice
+- as per industry best practices, only one application per container is allowed
 - is a blueprint of a running container
 - all the necessary softwares can be installed while creating a image
 - using container image, we can create containers
@@ -49,6 +51,12 @@ podman images
 ## Info - Containers
 <pre>
 - is running instance of a Container Image
+- one application along with it all its dependencies
+- it is an application process that runs in its own namespace
+- Linux kernels supports 2 features which enables the container technology
+  - Namespace
+    - is used to isolate one container from the other
+  - Control Groups ( CGroups )
 - it gets 
   - it own IP Address
   - it own Filesystem 
@@ -56,4 +64,26 @@ podman images
     - network stack
     - software defined network card ( NIC )
   - its own port range ( 0 - 65535 )
+</pre>
+
+## Docker Overview
+<pre>
+- is developed in Golang by a company called Docker Inc
+- it follows client-server Architecture
+  - client tool (docker)
+  - server tool (dockerd - which runs a service)
+</pre>
+
+## Podman Overview
+<pre>
+- is an open source product 
+- primarily maintained by Red Hat
+- it creates root-less containers ( meaning no admin/root user created within container images )
+- Red Hat acquired a company called CoreOS
+- The organization CoreOS had 2 interesting products
+  1. CoreOS - Operating System optimized & Secured for Container Orchestration Platforms like Kubernetes/Openshift
+  2. Container Runtime called rkt(pronounced as rocket)
+- Red Hat developed Podman Container Engine and CRI-O Container Runtime
+- The ideas from rkt were in created CRI-O
+- Starting from Red Hat Openshift 4.x, Openshift stopped support for Docker, they moved to Podman instead
 </pre>
