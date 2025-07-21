@@ -78,6 +78,9 @@ podman images
 - the containers created by one user will be visible to other users in the same linux machine
 </pre>
 
+## Docker - High Level Architecture
+![Docker]![Docker-High-Level-Architecture.png]
+
 ## Podman Overview
 <pre>
 - is an open source product 
@@ -413,7 +416,7 @@ Delete your local image
 podman rmi localhost:5000/mynginx:1.0
 ```
 
-Try pulling the image from private container registry
+Try pulling the image from private container registry 
 ```
 podman pull localhost:5000/mynginx:1.0
 ```
