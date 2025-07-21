@@ -94,3 +94,19 @@ podman images
 - all the containers that belongs to a single Pod, they get the same IP address
 - all the containers that belongs to a single Pod, they get to share the same Port Range ( 0 - 655535 )
 </pre>
+
+## Lab - Creating a container in Podman
+For downloading nginx image
+```
+podman pull docker.io/library/nginx:latest
+```
+
+To create and run a container
+```
+podman run -d --name nginx --hostname nginx docker.io/library/nginx:latest
+```
+
+To list the running containers
+```
+podman ps
+```
