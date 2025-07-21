@@ -5,3 +5,10 @@
 
 # Ubuntu Server 2 ( 192.168.10.201 )
 ![Users](server-2.png)
+
+## Podam
+<pre>
+podman --version
+podman images
+</pre>
+![podman](podman.png)
