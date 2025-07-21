@@ -420,6 +420,7 @@ Try pulling the image from private container registry
 ```
 podman pull localhost:5000/mynginx:1.0
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7c5b5c16-a3b8-437b-bb86-bfa3475c6b2c" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b4c84f03-aea6-4fe0-a811-dc5710a91025" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3e2505bc-1b05-4fab-98d6-636bb2e3e52c" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f60ea0ea-bfd1-48a2-acfb-de10b88b3fd6" />
