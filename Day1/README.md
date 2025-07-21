@@ -82,7 +82,7 @@ podman images
 ![Docker](Docker-High-Level-Architecture.png)
 
 ## Podman - High Level Architecture
-
+![Podman](podman.webp)
 
 ## Podman Overview
 <pre>
