@@ -11,3 +11,24 @@ sudo apt-get -y install podman
 podman --version
 podman images
 ```
+
+## Info - Container Engine
+<pre>
+- it is a high-level software that manages container images and containers
+- highly user-friendly, abstracts lots of complex internal implementation details nicely,while providing user-friendly commands
+- internally Container Engines depends on Container Runtime
+- examples
+  - Docker
+    - internally depends on containerd, which in turn depends on runC Container Runtime
+  - Podman
+    - internally depends on CRI-O Container Runtime
+</pre>
+
+## Info - Container Runtime
+<pre>
+- is a low-level software that manages container images and containers
+- not so user-friendly, hence no end-users normally uses this directly
+- examples
+  - CRI-O Container Runtime
+  - runC Container Runtime
+</pre>
