@@ -386,7 +386,7 @@ Export the GPG Public key
 gpg --armor --export tektutor > ~/tektutor-pubkey.gpg
 ```
 
-Configure the trust policy
+Configure the trust policy ~/.config/containers/policy.json
 <pre>
 {
   "default": [
