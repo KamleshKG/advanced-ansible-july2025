@@ -173,3 +173,9 @@ hostname -i
 # To come out of the container shell
 exit
 ```
+
+## Lab - Finding the IP Address of a container
+```
+podman exec nginx hostname -i
+
+```
