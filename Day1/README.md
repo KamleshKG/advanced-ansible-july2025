@@ -177,5 +177,21 @@ exit
 ## Lab - Finding the IP Address of a container
 ```
 podman exec nginx hostname -i
+```
 
+## Lab - Port Forwarding
+In the below command, port 8085 opens a up port in local machine, any request received at port 8085 will be forwared to the port 80 of nginx container.
+```
+podman run -d -p 8085:80 nginx
+```
+
+Troublesshooting bind issue
+<pre>
+- May be the 8085 port is already used by other participant
+- Replace 8085 with some other non-conflicting port in the range 1024 to 65535 )
+</pre>
+
+Now you may access the web page hosted inside the nginx contianer
+```
+curl http://localhost:8085
 ```
