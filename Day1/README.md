@@ -173,11 +173,11 @@ podman ps -a
 
 ## Lab - Getting inside a running container shell
 ```
-# Type this on your lab machine i.e ubuntu terminal
+# Type this on your Ubuntu lab machine terminal
 podman ps
 podman exec -it nginx /bin/sh
 
-# Type thes commands inside the container shell
+# Type these commands inside the container shell
 ls
 hostname
 hostname -i
