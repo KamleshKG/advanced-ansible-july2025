@@ -291,6 +291,12 @@ podman pod rm -f nginx
 
 
 ## Lab - Creating a custom podman image
+Create a folder
+```
+mkdir -f ~/custom-docker-image
+cd ~/custom-docker-image
+```
+
 Create a file named Dockerfile 
 ```
 FROM docker.io/nginx:alpine
@@ -340,3 +346,30 @@ podman run -d --name nginx --pod nginx docker.io/nginx:latest
 podman ps -a
 podman pod list
 ```
+
+## Lab - Signing and Verifying container image (Incomplete - let's revisit)
+
+```
+curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-amd64"
+sudo mv cosign-linux-amd64 /usr/local/bin/cosign
+sudo chmod +x /usr/local/bin/cosign
+```
+
+## Python Overview
+<pre>
+- is a scripting language
+- it is one of the dynamically typed programming language
+- this language is used pretty much everyone
+  - academic
+  - console based applications
+  - web based - flask, Django Web Frameworks
+  - to develop games
+  - to develop cross-platform GUI applications for Desktops using Qt & QML
+  - used in Machine/Deep Learning
+</pre>
+
+## Lab - Hello World Python script
+hello.py
+<pre>
+  
+</pre>
