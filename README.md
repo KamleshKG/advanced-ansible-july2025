@@ -6,7 +6,7 @@
 # Ubuntu Server 2 ( 192.168.10.201 )
 ![Users](server-2.png)
 
-## Podam
+## Podman
 <pre>
 podman --version
 podman images
