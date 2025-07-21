@@ -137,3 +137,10 @@ List all images with full image id
 ```
 podman image list --no-tunc
 ```
+
+Finding more details about a container image
+```
+podman image inspect <name of the container image>
+podman image inspect docker.io/library/nginx:latest
+```
+
