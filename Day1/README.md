@@ -348,12 +348,76 @@ podman pod list
 ```
 
 ## Lab - Signing and Verifying container image (Incomplete - let's revisit)
+Let's create a private registry locally
+```
+podman run -d -p 5000:5000 --name registry registry:2
+```
 
+Tag your custom container image
 ```
-curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-amd64"
-sudo mv cosign-linux-amd64 /usr/local/bin/cosign
-sudo chmod +x /usr/local/bin/cosign
+podman tag localhost/mynginx:1.0 localhost:5000/mynginx:1.0
 ```
+
+Configure the registry by editing ~/.config/containers/registries.conf
+```
+[[registry]]
+location = "localhost:5000"
+insecure = true
+```
+
+Restart podman service
+```
+systemctl restart podman
+systemctl status podman
+```
+
+Push your image to local registry after signing
+```
+podman push --sign-by tektutor localhost:5000/mynginx:1.0
+```
+
+Check if your custom image is available in private container registry
+```
+curl http://localhost:5000/v2/_catalog
+```
+
+Export the GPG Public key
+```
+gpg --armor --export tektutor > ~/tektutor-pubkey.gpg
+```
+
+Configure the trust policy
+<pre>
+{
+  "default": [
+    {
+      "type": "reject"
+    }
+  ],
+  "transports": {
+    "docker": {
+      "localhost:5000/mynginx": [
+        {
+          "type": "signedBy",
+          "keyType": "GPGKeys",
+          "keyPath": "/home/jegan/tektutor-pubkey.gpg"
+        }
+      ]
+    }
+  }
+}  
+</pre>  
+
+Delete your local image
+```
+podman rmi localhost:5000/mynginx:1.0
+```
+
+Try pulling the image from private container registry
+```
+podman pull localhost:5000/mynginx:1.0
+```
+
 
 ## Python Overview
 <pre>
