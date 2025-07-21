@@ -207,3 +207,15 @@ Now you may access the web page hosted inside the nginx contianer
 ```
 curl http://localhost:8085
 ```
+
+## Lab - Deleting a docker image
+```
+# List images before deleting
+podman images
+
+#Delete the image from your local registry( deletes only for you )
+podman rmi registry.fedoraproject.org/fedora:latest
+
+# List images after deleting
+podman images
+```
