@@ -105,3 +105,32 @@ Expected output
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/35cc2158-4247-4225-94ae-34ba9963375c" />
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/1c23d89e-d9c8-49e0-89e9-f468ba80c882" />
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/09e92a11-4e66-4ea6-8a4e-c8ddc1210429" />
+
+## Lab - Creating ubuntu ansible node containers and testing it
+Let's list the custom images
+```
+podman images
+```
+
+Let's create couple of ubuntu ansible node containers
+```
+podman run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:1.0
+podman run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:1.0
+```
+
+List and check if ubuntu1 and ubuntu2 ansible node containers are running
+```
+podman ps
+```
+
+SSH into ubuntu1 and ubuntu2 containers and check if it is allowing you to login without prompting for password
+```
+ssh -p 2001 root@localhost
+exit
+ssh -p 2002 root@localhost
+exit
+
+```
+Expected output
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/19bc6899-c5f7-4959-bd78-0797a4d914f7" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/1a1353c5-9d98-4417-98b6-d031960763cc" />
