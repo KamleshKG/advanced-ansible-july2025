@@ -1,0 +1,5 @@
+- name: This playbooks will test if ansible is able to reach out to the ansible nodes
+  hosts: all
+  tasks:
+  - name: Ping ansible nodes
+    ping:
