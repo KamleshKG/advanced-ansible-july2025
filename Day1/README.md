@@ -364,6 +364,11 @@ Tag your custom container image
 podman tag localhost/mynginx:1.0 localhost:5000/mynginx:1.0
 ```
 
+We need to create the folder ~/.config/containers
+```
+mkdir -p ~/.config/containers
+```
+
 Configure the registry by editing ~/.config/containers/registries.conf
 ```
 [[registry]]
@@ -373,9 +378,13 @@ insecure = true
 
 Restart podman service
 ```
-systemctl restart podman
-systemctl status podman
+sudo systemctl daemon-reload
+sudo systemctl restart podman
+sudo systemctl status podman
 ```
+
+We need to generate the gpg key pair
+![key-gen](gpg.png)
 
 Push your image to local registry after signing
 ```
