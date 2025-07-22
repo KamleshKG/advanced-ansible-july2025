@@ -1,5 +1,14 @@
 # Day 2
 
+## Demo - Installing ansible core in Ubuntu
+````
+wget -O- "https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367" | sudo gpg --dearmour -o /usr/share/keyrings/ansible-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/ansible-archive-keyring.gpg] http://ppa.launchpad.net/ansible/ansible/ubuntu $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/ansible.list
+
+sudo apt update && sudo apt install ansible
+````
+
 ## Info - Configuration Management Tools Overview
 <pre>
 - Configuration Management Tools helps us automate system administrative activities
@@ -74,7 +83,7 @@ ssh-keygen
 
 cd ~\advanced-ansible-july2025
 git pull
-cd Day2/custom-contianer-images/ubuntu
+cd Day2/custom-container-images/ubuntu
 cat Dockerfile
 cp ~/.ssh/id_ed25519.pub authorized_keys
 podman build -t tektutor/ubuntu-ansible-node:1.0 .
@@ -83,3 +92,55 @@ podman images | grep ubuntu-ansible
 
 Expected output
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/bb589c41-6e67-4005-b6a1-15b814c1a7b9" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/649a5053-2396-4fe7-9af0-7974ea047e27" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/d79ecfc8-f7cf-4ced-8e57-94902abf1928" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/7099e555-10b5-4044-92b2-6f625d78df47" />
+
+## Lab - Building Custom Rocky Ansible Node container image
+
+```
+cd ~\advanced-ansible-july2025
+git pull
+cd Day2/custom-container-images/rocky
+cat Dockerfile
+cp ~/.ssh/id_ed25519.pub authorized_keys
+podman build -t tektutor/rocky-ansible-node:1.0 .
+podman images | grep rocky-ansible
+```
+
+Expected output
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/b265e1ef-f203-43a8-82c0-92f06302f961" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/397f232d-8e07-4b5e-8c5a-557771275d64" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/35cc2158-4247-4225-94ae-34ba9963375c" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/1c23d89e-d9c8-49e0-89e9-f468ba80c882" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/09e92a11-4e66-4ea6-8a4e-c8ddc1210429" />
+
+## Lab - Creating ubuntu ansible node containers and testing it
+Let's list the custom images
+```
+podman images
+```
+
+Let's create couple of ubuntu ansible node containers
+```
+podman run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:1.0
+podman run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:1.0
+```
+
+List and check if ubuntu1 and ubuntu2 ansible node containers are running
+```
+podman ps
+```
+
+SSH into ubuntu1 and ubuntu2 containers and check if it is allowing you to login without prompting for password
+```
+ssh -p 2001 root@localhost
+exit
+ssh -p 2002 root@localhost
+exit
+
+```
+Expected output
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/19bc6899-c5f7-4959-bd78-0797a4d914f7" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/1a1353c5-9d98-4417-98b6-d031960763cc" />
+
