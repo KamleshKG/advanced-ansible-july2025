@@ -1,5 +1,14 @@
 # Day 2
 
+## Demo - Installing ansible core in Ubuntu
+````
+wget -O- "https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367" | sudo gpg --dearmour -o /usr/share/keyrings/ansible-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/ansible-archive-keyring.gpg] http://ppa.launchpad.net/ansible/ansible/ubuntu $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/ansible.list
+
+sudo apt update && sudo apt install ansible
+````
+
 ## Info - Configuration Management Tools Overview
 <pre>
 - Configuration Management Tools helps us automate system administrative activities
@@ -134,3 +143,4 @@ exit
 Expected output
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/19bc6899-c5f7-4959-bd78-0797a4d914f7" />
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/1a1353c5-9d98-4417-98b6-d031960763cc" />
+
