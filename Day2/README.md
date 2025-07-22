@@ -1,1 +1,60 @@
 # Day 2
+
+## Info - Configuration Management Tools Overview
+<pre>
+- Configuration Management Tools helps us automate system administrative activities
+- it is one of the DevOps tools
+- With Configuration Management Tools
+  - given a machine with some OS pre-installed
+  - we can remotely using these tools to further install/uninstall,configure, update/upgrade softwares, manage users, manage networks etc on that machine 
+- examples
+  - Puppet ( oldest - developed and maintained by Perforce )
+  - Chef
+  - Salt/Saltstack
+  - Ansible
+</pre>
+
+## Info - Ansible Overview
+<pre>
+- ansible is developed by Michael Deehan 
+- Michael Deehan started a company called Ansible Inc
+- ansible can only be installed in Linux distros, no Windows
+- the machine where Ansible is installed is called Ansible Controller Machine(ACM)
+- the machines/servers that ansible is going to manage are called Ansible Nodes
+- Ansible Nodes
+  - are containers or servers, could be physical server or virtual machine, or ec2 instances running in public cloud
+  - it could be Server with Linux or Unix or Windows or Mac OS-X, Router, Switch, etc.,
+  - Unix/Linux/Mac
+    - required softwares
+      1. SSH Server should be there
+      2. Python should be there
+  - Windows
+    1. WinRM should be there
+    2. Powershell should be supported
+- ansible comes in 3 flavours
+  1. Ansible Core - open source, CLI only
+  2. AWX 
+     - open source 
+     - supports Webconsole GUI
+     - developed on top of Ansible core
+     - user management
+     - supports many additional features on top of Ansible core
+  3. Ansible Automation Platform 
+    - formerly called Ansible Towers
+    - developed on top of opensource AWX
+    - all the features supported by AWX are supported in Ansible Tower or Ansible Automation Platform
+    - you get support from Red Hat
+- installing ansible is very easy
+- Ansible Modules
+  - are Python scripts in case the node happens to be an Unix/Linux/Mac OS
+  - are Powershell scrips in case the node is a Windows machine
+  - Ansible comes with many ansible modules
+    - there is a module called copy to copy files from controller machine to node or vice versa
+    - there is a windows called win_copy to copy files from controller machine to node or vice versa
+    - file modules helps us create empty files, directories with specific permissions and owernship
+    - apt module to install/uninstall/upgrade softwares in Debain(Ubuntu, Raspberry, Kali like OS )
+    - yum module to install/uninstall/upgrade softwares in Red Hat Linux family (CentOS stream, Fedora, RHEL )
+- Playbook (YAML File )
+  - playbook invokes one or more ansible modules sequentially one after the other 
+  - DSL is YAML
+</pre>
