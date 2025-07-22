@@ -153,4 +153,10 @@ ansible -i inventory ubuntu1 -m setup
 ansible -i inventory all -m shell -a "hostname -i"
 ```
 
-## 
+## Lab - Writing a simple ansible playbook
+```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day2/ansible/playbooks
+ansible-playbook -i ../inventory ping-playbook.yml 
+```
