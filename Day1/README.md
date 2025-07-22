@@ -384,7 +384,10 @@ sudo systemctl status podman
 ```
 
 We need to generate the gpg key pair
-![key-gen](gpg.png)
+![key-gen](gpg1.png)
+![key-gen](gpg2.png)
+![key-gen](gpg3.png)
+
 
 Push your image to local registry after signing
 ```
