@@ -160,3 +160,4 @@ git pull
 cd Day2/ansible/playbooks
 ansible-playbook -i ../inventory ping-playbook.yml 
 ```
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/35063515-2e92-4751-982f-143ad0db10e9" />
