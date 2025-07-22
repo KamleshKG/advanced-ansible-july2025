@@ -138,7 +138,6 @@ ssh -p 2001 root@localhost
 exit
 ssh -p 2002 root@localhost
 exit
-
 ```
 Expected output
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/19bc6899-c5f7-4959-bd78-0797a4d914f7" />
@@ -150,6 +149,8 @@ cd ~/advanced-ansible-july2025
 git pull
 cd Day2/ansible
 ansible -i inventory all -m ping
+ansible -i inventory ubuntu1 -m setup
+ansible -i inventory all -m shell -a "hostname -i"
 ```
 
-Expected output
+## 
