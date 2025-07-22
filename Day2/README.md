@@ -58,3 +58,28 @@
   - playbook invokes one or more ansible modules sequentially one after the other 
   - DSL is YAML
 </pre>
+
+## Lab - Clone this training repository
+```
+cd ~
+git clone https://github.com/tektutor/advanced-ansible-july2025.git
+cd advanced-ansible-july2025
+```
+
+## Lab - Building Custom Ubuntu Ansible Node container image
+```
+# Generate key-pair, accept all default by hitting enter whenever it prompts for something
+cd ~
+ssh-keygen
+
+cd ~\advanced-ansible-july2025
+git pull
+cd Day2/custom-contianer-images/ubuntu
+cat Dockerfile
+cp ~/.ssh/id_ed25519.pub authorized_keys
+podman build -t tektutor/ubuntu-ansible-node:1.0 .
+podman images | grep ubuntu-ansible
+```
+
+Expected output
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/bb589c41-6e67-4005-b6a1-15b814c1a7b9" />
