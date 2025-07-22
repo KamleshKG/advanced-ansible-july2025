@@ -87,3 +87,16 @@ Expected output
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/d79ecfc8-f7cf-4ced-8e57-94902abf1928" />
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/7099e555-10b5-4044-92b2-6f625d78df47" />
 
+## Lab - Building Custom Rocky Ansible Node container image
+
+```
+cd ~\advanced-ansible-july2025
+git pull
+cd Day2/custom-container-images/rocky
+cat Dockerfile
+cp ~/.ssh/id_ed25519.pub authorized_keys
+podman build -t tektutor/rocky-ansible-node:1.0 .
+podman images | grep rocky-ansible
+```
+
+Expected output
