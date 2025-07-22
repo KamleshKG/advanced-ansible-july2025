@@ -144,3 +144,12 @@ Expected output
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/19bc6899-c5f7-4959-bd78-0797a4d914f7" />
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/1a1353c5-9d98-4417-98b6-d031960763cc" />
 
+## Lab - Ansible ping ad-hoc command
+```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day2/ansible
+ansible -i inventory all -m ping
+```
+
+Expected output
