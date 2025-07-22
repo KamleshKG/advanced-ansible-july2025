@@ -74,7 +74,7 @@ ssh-keygen
 
 cd ~\advanced-ansible-july2025
 git pull
-cd Day2/custom-contianer-images/ubuntu
+cd Day2/custom-container-images/ubuntu
 cat Dockerfile
 cp ~/.ssh/id_ed25519.pub authorized_keys
 podman build -t tektutor/ubuntu-ansible-node:1.0 .
