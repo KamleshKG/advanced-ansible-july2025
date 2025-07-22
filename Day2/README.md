@@ -100,3 +100,5 @@ podman images | grep rocky-ansible
 ```
 
 Expected output
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/b265e1ef-f203-43a8-82c0-92f06302f961" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/397f232d-8e07-4b5e-8c5a-557771275d64" />
