@@ -384,6 +384,9 @@ sudo systemctl status podman
 ```
 
 We need to generate the gpg key pair
+```
+gpg --full-gen-key
+```
 ![key-gen](gpg1.png)
 ![key-gen](gpg2.png)
 ![key-gen](gpg3.png)
