@@ -84,4 +84,5 @@ podman images | grep ubuntu-ansible
 Expected output
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/bb589c41-6e67-4005-b6a1-15b814c1a7b9" />
 <img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/649a5053-2396-4fe7-9af0-7974ea047e27" />
+<img width="1891" height="1057" alt="image" src="https://github.com/user-attachments/assets/d79ecfc8-f7cf-4ced-8e57-94902abf1928" />
 
