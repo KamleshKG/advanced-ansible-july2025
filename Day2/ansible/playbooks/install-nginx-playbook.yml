@@ -18,5 +18,9 @@
   - name: Restart nginx server to apply config changes
     service: name=nginx state=restarted
 
+  - name: Retreive IP address
+    shell: hostname -i
+    register: ipaddress
+
   - name: Deploy custom web page
     template: src=index.html.j2 dest=/var/html/index.html
