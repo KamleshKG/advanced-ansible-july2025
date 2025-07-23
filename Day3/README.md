@@ -39,7 +39,7 @@ dn: ou=users,dc=palmeto,dc=org
 objectClass: organizationalUnit
 ou: users
 
-dn: ou=groups,dc=example,dc=com
+dn: ou=groups,dc=palmeto,dc=org
 objectClass: organizationalUnit
 ou: groups  
 </pre>
