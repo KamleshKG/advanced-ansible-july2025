@@ -109,15 +109,27 @@ Click on "Projects" on the left side
 
 
 ## Lab - Creating Credentials in Ansible Automation Platform (AAP)
+Navigate to AAP Webconsole
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/60d0c6ec-0b5f-488f-9a03-66a06b4d7b83" />
+
 Navigate to Automation Execution --> Infrastructure --> Credentials
-
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/139d0c33-4474-4798-928c-c6ae88eff25c" />
 Click "Create Credential"
-
-Open a terminal
-```
-ls -l ~/.ssh/
-cat ~/.ssh/id_ed25519
-```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7fd1a77f-8bd7-47ba-b085-084ec2b56f87" />
+<pre>
+Name - Jegan - Private key
+Organization - Default
+Credential type - Machine
+SSH Private key - <From your lab machine terminal, cat ~/.ssh/id_ed25519 and copy/paste entire key including begin, end with hypens, etc>
+</pre>
+<img width="1122" height="341" alt="image" src="https://github.com/user-attachments/assets/b85c032b-93ae-43a5-b41e-cffe127c315d" />
+<img width="1122" height="341" alt="image" src="https://github.com/user-attachments/assets/ad6f31ab-1c13-46d0-9a3a-7dea8212955b" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8414b13e-58fb-4e3e-a289-bbfb8ca02294" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b547bda6-ebf8-4a92-b663-b6be0d5dbcb2" />
+Click "Create Credential"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6f5fdc92-890e-457c-bf3f-f2ad1b03c26d" />
+Click "Credentials" on the left side menu
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d049bcbc-5652-462a-bc20-3c16f73a2c2e" />
 
 ## Lab - Creating all 4 hosts in AAP
 
