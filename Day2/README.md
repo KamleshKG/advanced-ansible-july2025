@@ -238,3 +238,5 @@ ansible-playbook install-nginx-playbook.yml
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d60c9f99-2424-4984-81b1-ce69d909fcfb" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/13c93b8e-f784-4da0-ae5d-5331d0941acc" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/efed7c30-5a32-4d25-954c-c22528f9adc4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/38b7721f-33ec-4c2a-b40e-584207cb93d7" />
