@@ -98,16 +98,31 @@ Script to extract existing linux users and add them as users in LDAP server
 ```
 #!/bin/bash
 
-LDAP_PASS="{SSHA}Xky2OjkOZt5U4eebv9rWsk9VUYR6Fa9Z"  # hashed palmeto@123
+# Hashed value of "palmeto@123" using slappasswd
+LDAP_PASS="{SSHA}Xky2OjkOZt5U4eebv9rWsk9VUYR6Fa9Z"
+
+# Clear any previous LDIF
+> bulk-users.ldif
 
 for user in $(ls -l /home | awk '{print $3}' | sort -u); do
-    IFS=':' read -r username _ uid gid full home shell <<< "$(getent passwd $user)"
-    [ -z "$username" ] && continue  # skip if user not found
+    # Get user details from /etc/passwd
+    IFS=':' read -r username _ uid gid full home shell <<< "$(getent passwd "$user")"
 
-    cn=$(echo $full | cut -d' ' -f1)
-    sn=$(echo $full | cut -d' ' -f2)
+    # Skip if user not found
+    [ -z "$username" ] && continue
 
-    cat <<EOF >> bulk-users.ldif
+    # Default values for cn and sn
+    if [ -z "$full" ]; then
+        cn="$username"
+        sn="user"
+    else
+        cn=$(echo "$full" | cut -d' ' -f1)
+        sn=$(echo "$full" | cut -d' ' -f2)
+        [ -z "$cn" ] && cn="$username"
+        [ -z "$sn" ] && sn="user"
+    fi
+
+    cat <<EOF >> palmeto-ldap-users.ldif
 dn: uid=$username,ou=users,dc=palmeto,dc=org
 objectClass: inetOrgPerson
 objectClass: posixAccount
@@ -123,4 +138,6 @@ userPassword: $LDAP_PASS
 
 EOF
 done
+
+echo "LDIF file generated: palmeto-ldap-users.ldif"
 ```
