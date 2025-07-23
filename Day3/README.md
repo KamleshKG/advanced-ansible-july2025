@@ -1,5 +1,56 @@
 # Day 3
 
+## Info - Ansible Automation Platform Overview
+<pre>
+- Red Hat’s enterprise solution for automating IT tasks across infrastructure, applications, networks, security, and cloud environments 
+- built around Ansible, the popular open-source automation tool
+- supports enterprise-grade features like:
+  - A web UI (Automation Controller)
+  - RBAC (Role-Based Access Control)
+  - Logging & analytics
+  - Execution environments
+  - Certified content and collections
+  - Integration with source control (Git), ticketing systems, and more    
+</pre>
+
+#### Automation Controller
+<pre>
+- Manages, schedules, and runs Ansible playbooks. UI + REST API (formerly AWX/Ansible Tower)   
+</pre>
+
+#### Execution Environments (EE)
+<pre>
+- Containerized environments where automation runs    
+</pre>
+
+#### Automation Hub
+<pre>
+- Internal or Red Hat-hosted repository of certified and custom content (collections, roles, plugins)   
+</pre>
+
+#### Automation Analytics
+<pre>
+- Dashboard that shows usage, trends, job status, and recommendations. Hosted by Red Hat    
+</pre>
+
+#### Automation Mesh
+<pre>
+- Connects distributed execution nodes across data centers, clouds, and edge   
+</pre>
+
+#### Ansible Content Collections
+<pre>
+- Modular bundles of roles, playbooks, plugins, and docs. Used inside playbooks.   
+ </pre>
+
+#### RBAC & Credentials
+<pre>
+- Secure control over who can do what and access which systems   
+</pre>
+
+## Info - Ansible Automation Platform - High Level Architecture
+![architecture](aap-architecture.png)
+
 ## Lab - Getting help about any ansible module
 ```
 ansible-doc service
