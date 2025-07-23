@@ -87,6 +87,7 @@ Navigate to Automation Execution --> Projects
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e7651f8a-f4f2-443a-8f7b-21457b404c84" />
 Click "Create Project"
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/32168cb7-d3f5-4fd0-80f0-3b7e02cbeaf2" />
+<pre>
 Name - TekTutor Training Repository
 Organization - Default
 Execution environment - Default Execution environment
@@ -94,6 +95,7 @@ Source control type - Git
 Source control url - https://github.com/tektutor/advanced-ansible-july2025.git
 Source control branch/tag/commit - main
 Options --> Update revision on launch(selected)
+</pre>  
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/16745a9c-af17-4308-8d26-05f1ad16b52b" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0184582b-fc89-48b1-b8b6-3342b50f890b" />
 Click "Create Project"
