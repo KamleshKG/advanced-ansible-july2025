@@ -254,7 +254,29 @@ Click "Finish"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3ce8c5f0-b44e-4ff1-9bb9-f52a7852bc66" />
 Click "Invoke Install Nginx Playbook"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b68be074-b21f-48f5-8f25-ce4d76cd368b" />
-Click "Edit"
+Click "Edit" and Remove the step
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b7c204a7-6a9e-46f2-86be-40d0c9d2a2ba" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8181eac0-9b46-4811-9e1d-96e7308f952f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/db25bf42-2bee-4bcd-85c5-48c3bb959cc1" />
+Click "Remove step"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e17eb041-a404-4149-bdd7-f7feb8720fd7" />
+Now click on "Tektutor Training Repository" vertical 3 dots
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8a9793e8-e37f-41a9-9546-45cab4a962b1" />
+Select "Add step and link"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9d60ae11-31fd-4bd4-90b7-10fac0b3dbd6" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/61102a2b-4393-4c7f-ad5b-2ee1d8a8fdf3" />
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2d0d690b-a634-4f83-a052-8f8bd8d29ae7" />
+Click "Finish"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d9ba7dbe-3375-4b6a-b618-e5bd60b890a1" />
+Click "Save"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/34288f55-3d3b-4f73-9640-2eac01453410" />
+Click "Launch workflow"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/90b263b3-5419-4597-8c30-807d06f49144" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a5ae0b0e-d182-4fcb-81e5-8ffb35523afc" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f8c28e9d-20b1-402a-ae5e-713b80e6cbf8" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b6e8ac3a-0bc2-4a2f-acad-ec9ac4c1fc01" />
+
 
 
 
