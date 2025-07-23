@@ -142,11 +142,13 @@ done
 
 echo "LDIF file generated: palmeto-ldap-users.ldif"
 ```
+
+In case you wish to delete existing users from LDAP server before adding the below users
+```
 ldapsearch -LLL -x -D "cn=admin,dc=palmeto,dc=org" -w 'palmeto@123' -b "ou=users,dc=palmeto,dc=org" "(objectClass=inetOrgPerson)" dn \
   | grep '^dn:' \
   | sed 's/^dn: //' \
   | xargs -n1 ldapdelete -x -D "cn=admin,dc=palmeto,dc=org" -w 'palmeto@123'
-In case you wish to delete existing users from LDAP server before adding the below users
 ```
 
 Let's add the ldap users now
