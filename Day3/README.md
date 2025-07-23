@@ -102,8 +102,9 @@ Script to extract existing linux users and add them as users in LDAP server
 # Hashed value of "palmeto@123" using slappasswd
 LDAP_PASS="{SSHA}Xky2OjkOZt5U4eebv9rWsk9VUYR6Fa9Z"
 
-# Clear any previous LDIF
-> bulk-users.ldif
+# Output LDIF file
+OUTPUT_FILE="palmeto-ldap-users.ldif"
+> "$OUTPUT_FILE"
 
 for user in $(ls -l /home | awk '{print $3}' | sort -u); do
     # Get user details from /etc/passwd
@@ -112,7 +113,7 @@ for user in $(ls -l /home | awk '{print $3}' | sort -u); do
     # Skip if user not found
     [ -z "$username" ] && continue
 
-    # Default values for cn and sn
+    # Set default values for cn and sn
     if [ -z "$full" ]; then
         cn="$username"
         sn="user"
@@ -123,7 +124,10 @@ for user in $(ls -l /home | awk '{print $3}' | sort -u); do
         [ -z "$sn" ] && sn="user"
     fi
 
-    cat <<EOF >> palmeto-ldap-users.ldif
+    # Set email from username
+    email="${username}@palmeto.org"
+
+    cat <<EOF >> "$OUTPUT_FILE"
 dn: uid=$username,ou=users,dc=palmeto,dc=org
 objectClass: inetOrgPerson
 objectClass: posixAccount
@@ -135,12 +139,13 @@ uidNumber: $uid
 gidNumber: $gid
 homeDirectory: $home
 loginShell: $shell
+mail: $email
 userPassword: $LDAP_PASS
 
 EOF
 done
 
-echo "LDIF file generated: palmeto-ldap-users.ldif"
+echo "LDIF file generated: $OUTPUT_FILE"
 ```
 
 In case you wish to delete existing users from LDAP server before adding the below users
