@@ -181,3 +181,6 @@ podman ps | grep tektutor
 curl http://localhost:<your-container1-port>
 curl http://localhost:<your-container2-port>
 ```
+
+Expected output
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dc337c26-69f1-40b7-8416-f8af18a58e5d" />
