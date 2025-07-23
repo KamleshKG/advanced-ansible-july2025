@@ -167,6 +167,31 @@ ansible-playbook -i ../inventory ping-playbook.yml
 
 
 ## Lab - Running the install nginx playbook
+
 ```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day2/ansible/playbooks
 ansible-playbook -i ../inventory install-nginx-playbook.yml 
+```
+
+You need to create an index.html.j2 file under Day2/ansible/playbooks folder
+```
+<html>
+  <head>
+     <title>{{greeting_msg}}</title>
+  </head>
+  <body>
+     <h3>Hostname: {{ansible_hostname}}</h3>
+     <h3>IP Address: {{ipaddress.stdout}}</h3>
+     <h3>OS: {{ansible_distribution}} v{{ansible_distribution_verison}}</h3>
+  </body>
+</html>
+```
+Once you have executed the above playbook and it has installed nginx, you may copy the default config file as shown below
+```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day2/ansible/playbooks
+podman cp ubuntu1:/etc/nginx/sites-available/default .
 ```
