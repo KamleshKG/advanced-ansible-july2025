@@ -230,3 +230,11 @@ ansible all -m ping
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/be780851-c46e-405d-bae4-278ac0756ec2" />
+
+Now run the install-nginx-playbook.yml and observe the output
+```
+cat ansible.cfg
+ansible-playbook install-nginx-playbook.yml
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d60c9f99-2424-4984-81b1-ce69d909fcfb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/13c93b8e-f784-4da0-ae5d-5331d0941acc" />
