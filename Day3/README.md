@@ -146,3 +146,35 @@ Let's add the ldap users now
 ```
 ldapadd -x -D "cn=admin,dc=palmeto,dc=org" -W -f palmeto-ldap-users.ldif
 ```
+
+Let's create an openshift secret
+```
+oc create secret generic ldap-secret \
+  --from-literal=bind_dn='cn=admin,dc=palmeto,dc=org' \
+  --from-literal=bind_password='palmeto@123' \
+  -n aap
+```
+
+Login in to Ansible Automation Platform Admin UI
+Settings --> Authentication --> LDAP --> Add LDAP Source
+
+Paste the below LDAP configuration
+<pre>
+LDAP Server URI: ldap://ldap.palmeto.org
+StartTLS: false
+Bind DN: cn=admin,dc=palmeto,dc=org
+Bind Password: palmeto@123
+User Search Base: ou=People,dc=palmeto,dc=org
+User Search Filter: (uid=%(user)s)
+Group Search Base: ou=Groups,dc=palmeto,dc=org
+Group Object Class: groupOfNames
+Group Type: MemberDNGroupType
+Group Member Attribute: member
+Require Group: <optional LDAP group DN>
+User DN Template: uid=%(user)s,ou=People,dc=palmeto,dc=org    
+</pre>
+
+Test Login
+```
+oc logs deployment/automationcontroller -n aap
+```
