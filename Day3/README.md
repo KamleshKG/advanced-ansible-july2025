@@ -73,26 +73,34 @@ ansible-doc command
 ansible-doc -l | wc
 ```
 
-
 ## Lab - Finding the status of service
 ```
 podman exec <your-container-name> service nginx status
 ansible -i hosts -m shell -a "service nginx status"
 ```
 
-
 ## Lab - Creating a Project in Ansible Automation Platform (AAP)
-GitHub url, use main branch
-<pre>
-https://github.com/tektutor/advanced-ansible-july2025.git
-</pre>
-
 Navigate to AAP Webconsole
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e8d7ffa7-5e50-4e52-b4bc-4d60d0ddb2ca" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/60d0c6ec-0b5f-488f-9a03-66a06b4d7b83" />
 
 Navigate to Automation Execution --> Projects
-
-Select "Create Project"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e7651f8a-f4f2-443a-8f7b-21457b404c84" />
+Click "Create Project"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/32168cb7-d3f5-4fd0-80f0-3b7e02cbeaf2" />
+Name - TekTutor Training Repository
+Organization - Default
+Execution environment - Default Execution environment
+Source control type - Git
+Source control url - https://github.com/tektutor/advanced-ansible-july2025.git
+Source control branch/tag/commit - main
+Options --> Update revision on launch(selected)
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/16745a9c-af17-4308-8d26-05f1ad16b52b" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0184582b-fc89-48b1-b8b6-3342b50f890b" />
+Click "Create Project"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/4103e20d-bde2-4cff-9f40-8ea307c4f632" />
+Click on "Success"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a6d28920-0fab-4e6e-b558-40ad8de2d7e1" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/04057f6c-1301-4308-9af7-9994b2d2bdb4" />
 
 
 ## Lab - Creating Credentials in Ansible Automation Platform (AAP)
