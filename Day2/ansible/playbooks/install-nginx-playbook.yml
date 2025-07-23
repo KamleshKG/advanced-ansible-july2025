@@ -1,22 +1,54 @@
 - name: This playbook will install nginx web server, configures web root folder, deploy custom web page
   hosts: all
   vars:
-  - greeting_msg: Welcome to DevOps !
+    greeting_msg: Welcome to DevOps !
   tasks:
   - name: Install nginx web server in Ubuntu ansible node
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     apt: name=nginx state=latest update_cache=yes
 
-  - name: Start the nginx service
+  - name: Install Extra Packages for Enterprise Linux (epel-release) Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    yum: name=epel-release state=latest
+
+  - name: Install nginx web server in Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    yum: name=nginx state=latest
+
+  - name: Start the nginx service in Ubuntu ansible node
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     service: name=nginx state=started enabled=true
+
+  - name: Check if nginx server is already running in Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    shell: curl http://localhost
+    register: output
+    ignore_errors: true
+
+  - debug: var=output
+
+  - name: Start the nginx service in Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and output.rc != 0 )
+    shell: nginx
 
   - name: Create a custom folder so that nginx can serve web pages from our folder
     file: path=/var/html mode=0777 state=directory
 
-  - name: Configure nginx server to use our custom folder to serve web pages 
+  - name: Configure nginx server to use our custom folder to serve web pages in Ubuntu ansible node
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     copy: src=default dest=/etc/nginx/sites-available/default
 
-  - name: Restart nginx server to apply config changes
+  - name: Configure nginx server to use our custom folder to serve web pages in Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+
+  - name: Restart nginx server to apply config changes in Ubuntu ansible node
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     service: name=nginx state=restarted
+
+  - name: Restart the nginx service in Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and output.rc != 0 )
+    shell: nginx -s stop && nginx
 
   - name: Retreive IP address
     shell: hostname -i
