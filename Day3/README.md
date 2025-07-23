@@ -26,6 +26,7 @@ Move old database?	Yes
 Check if LDAP Server is running
 ```
 sudo systemctl status slapd
+sudo ss -tulnp | grep :389
 ```
 
 Check if LDAP search works
