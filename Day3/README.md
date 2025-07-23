@@ -132,6 +132,11 @@ Click "Credentials" on the left side menu
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d049bcbc-5652-462a-bc20-3c16f73a2c2e" />
 
 ## Lab - Creating all 4 hosts in AAP
+Check if your ansible node containers ubuntu1, ubuntu2, rocky1 and rocky2 are running
+```
+podman ps
+```
+<img width="1686" height="241" alt="image" src="https://github.com/user-attachments/assets/1c07c869-97d6-4fee-9677-93f238ff958b" />
 
 
 
