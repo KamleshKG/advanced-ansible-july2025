@@ -278,6 +278,30 @@ Click "Launch workflow"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b6e8ac3a-0bc2-4a2f-acad-ec9ac4c1fc01" />
 
 
+## Lab - Scheduling Ansible Playbook
+Navigate to Automation Execution --> Templates
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/eb5f59c8-4f99-462b-9dd4-a681a433dde7" />
+Click on "Invoke Install Nginx Playbook"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3a0c24b5-caf3-41f3-8a66-69d7a90218a7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f91d337e-510b-4d90-adfb-6ebf2a4af160" />
+Select the Schedules Tab
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cd9cfb2a-46e6-4be1-96d1-5eebb5045e8b" />
+Click "Create schedule"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/463d435e-575c-4779-a290-6bf5b68e23d1" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f964aba4-473f-4a52-b8c7-130a18d5e630" />
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7d8e207b-e171-496b-9081-2d6c2185e6f4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7b0eb89c-eb04-4ef4-b65f-8fa5757f6857" />
+Click "Save rule"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/11627a5a-a464-4241-885f-41bc4fa76eac" />
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1317f521-eb5a-46f9-a3a1-24fe444718d7" />
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9551cf44-87b1-4d69-834e-4d598a17c39c" />
+Click "Finish"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/30c0588a-5cc8-4e7c-8c2b-fa9504b47f2d" />
+Navigate to Automation Execution --> Schedules
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/95215720-dcb7-40fd-ab70-a044aca567b1" />
 
 
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
