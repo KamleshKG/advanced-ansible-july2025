@@ -175,23 +175,66 @@ cd Day2/ansible/playbooks
 ansible-playbook -i ../inventory install-nginx-playbook.yml 
 ```
 
-You need to create an index.html.j2 file under Day2/ansible/playbooks folder
+If all goes well, you may test it as shown
 ```
-<html>
-  <head>
-     <title>{{greeting_msg}}</title>
-  </head>
-  <body>
-     <h3>Hostname: {{ansible_hostname}}</h3>
-     <h3>IP Address: {{ipaddress.stdout}}</h3>
-     <h3>OS: {{ansible_distribution}} v{{ansible_distribution_verison}}</h3>
-  </body>
-</html>
+podman ps | grep tektutor
+curl http://localhost:<your-container1-port>
+curl http://localhost:<your-container2-port>
 ```
-Once you have executed the above playbook and it has installed nginx, you may copy the default config file as shown below
+
+Expected output
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dc337c26-69f1-40b7-8416-f8af18a58e5d" />
+
+## Lab - Conditional installation in ansible playbook
+Let's create couple of rocky ansible node containers
 ```
-cd ~/advanced-ansible-july2025
-git pull
-cd Day2/ansible/playbooks
-podman cp ubuntu1:/etc/nginx/sites-available/default .
+# List our custom images
+podman images | grep tektutor
+
+# Create two rocky ansible node containers using our custom podman image
+podman run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:1.0
+podman run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:1.0
+
+## List all the running containers
+podman ps
 ```
+
+Let's test if SSH works in rocky1 and rocky2
+```
+ssh -p 2003 root@localhost
+exit
+ssh -p 2004 root@localhost
+exit
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2fffb6d0-1454-4f86-b676-a32b1aa01711" />
+
+We need to add the rocky container details in our inventory, the updated inventory should look as shown below
+<pre>
+[all]
+ubuntu1 ansible_port=2001
+ubuntu2 ansible_port=2002
+rocky1  ansible_port=2003
+rocky2  ansible_port=2004
+
+[all:vars]
+ansible_user=root
+ansible_host=localhost
+ansible_private_key_file=~/.ssh/id_ed25519  
+</pre>
+<img width="1242" height="439" alt="image" src="https://github.com/user-attachments/assets/23f7f3bc-ed62-4dc4-8e19-66701d2bfb9f" />
+
+Check if you are able to ping all nodes
+```
+ansible all -m ping
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/be780851-c46e-405d-bae4-278ac0756ec2" />
+
+Now run the install-nginx-playbook.yml and observe the output
+```
+cat ansible.cfg
+ansible-playbook install-nginx-playbook.yml
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d60c9f99-2424-4984-81b1-ce69d909fcfb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/13c93b8e-f784-4da0-ae5d-5331d0941acc" />
