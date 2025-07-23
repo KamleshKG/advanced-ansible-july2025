@@ -20,7 +20,13 @@
 
 #### Execution Environments (EE)
 <pre>
-- Containerized environments where automation runs    
+- Containerized environments where automation runs 
+- All automation in Red Hat Ansible Automation Platform runs on container images called automation execution environments
+- Execution environments are consistent and shareable container images that serve as Ansible control nodes 
+- Execution environments reduce the challenge of sharing Ansible content that has external dependencies 
+- execution environment makes it easy to replicate the developer’s environment, 
+- thereby enabling you to reproduce and scale the automation content that the developer has written 
+- In this way, execution environments make it easier for you to implement automation in a range of environments
 </pre>
 
 #### Automation Hub
