@@ -179,7 +179,7 @@ You need to create an index.html.j2 file under Day2/ansible/playbooks folder
 ```
 <html>
   <head>
-     <title>{{greeting_msg</title>
+     <title>{{greeting_msg}}</title>
   </head>
   <body>
      <h3>Hostname: {{ansible_hostname}}</h3>
