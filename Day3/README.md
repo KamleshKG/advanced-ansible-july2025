@@ -131,13 +131,67 @@ Click "Create Credential"
 Click "Credentials" on the left side menu
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d049bcbc-5652-462a-bc20-3c16f73a2c2e" />
 
-## Lab - Creating all 4 hosts in AAP
+## Lab - Create Inventroy with 4 hosts in AAP
 Check if your ansible node containers ubuntu1, ubuntu2, rocky1 and rocky2 are running
 ```
 podman ps
 ```
 <img width="1686" height="241" alt="image" src="https://github.com/user-attachments/assets/1c07c869-97d6-4fee-9677-93f238ff958b" />
 
+We need to create an inventory first, navigate to Automation Execution --> Infrastructure --> Inventories
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d0c7952d-d3d9-4659-8e18-4525b089f350" />
+
+Click "Create Inventory"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ecae90b2-4ee4-4f42-a7d2-eb7056e24bbb" />
+Select the first option "Create Inventory"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/795f88bf-f0d9-40a3-a2db-8d4c0690855c" />
+<pre>
+Name - Jegan - Docker Inventory
+Organization - Default
+</pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/680ecb9e-f44e-42f2-8b16-d52193349694" />
+Click "Create Inventory"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2b8e42f8-1390-47ed-aa0e-892aca3535aa" />
+
+Within the inventory you created, locate the Hosts Tab and click it
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0d2865ac-9f14-4c90-8616-bd86b68394f0" />
+Click "Create Host"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/271c8f10-d5bf-4283-86bd-faa29b41e7a5" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/01108432-4036-4d18-9f8e-0151eb82102d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f5f9661a-05f4-4043-967d-4880189336fc" />
+You need to find the port you published on your ubuntu lab server which is set to forward traffic to port 22 on your ubuntu1 container. Also make sure you give either 192.168.10.200 or 192.168.10.201 depending on which server you have working on in the training environment.
+<pre>
+ansible_port: 2001
+ansible_user: root
+ansible_host: 192.168.1.104
+host_key_checking: false
+</pre>
+Click "Create host"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5bea833d-2dc7-4aab-9d2c-78a374c52957" />
+Go back to Hosts tab within your Inventory
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0c04094a-6439-44b3-8f52-428b4532f0d6" />
+Repeat this procedure and add Ubuntu1, Rocky1 and Rocky2 Hosts
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c66746a3-6f0d-4a28-8f95-d3b696dead97" />
+
+Let's test if Ansible Automation Platform is able to ping the hosts we added in our inventory.
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f410a08c-52d8-437f-9856-1616d5060cce" />
+Click "Run command"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/522c41e4-5f5e-4284-8d8a-55bdaf2212a9" />
+<pre>
+Module - ping
+</pre>
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/146380c9-3c78-47a9-b0d6-0f7664e268ab" />
+Select Execution environment - Default execution environment
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/29a78305-a4e4-4554-83fe-6aa58c53f826" />
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8288cb97-b2e0-4d4b-8d5b-fe73beb6f4b8" />
+Select your Private key
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/56dfbe9a-8b3c-4948-835e-42e1ff2cb987" />
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/24dc49ea-7bcb-4d7f-bd40-63694c0a9ad0" />
+Click "Finish"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b11a4d65-544a-4d56-870a-86583a12e106" />
 
 
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
