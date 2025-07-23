@@ -23,6 +23,22 @@ podman exec <your-container-name> service nginx status
 ansible -i hosts -m shell -a "service nginx status"
 ```
 
+## Lab - Creating a Project in Ansible Automation Platform (AAP)
+GitHub url, use main branch
+<pre>
+https://github.com/tektutor/advanced-ansible-july2025.git
+</pre>
+
+Navigate to AAP Webconsole
+
+Navigate to Automation Execution --> Projects
+
+Select "Create Project"
+
+
+## Lab - Creating Credentials in Ansible Automation Platform (AAP)
+
+
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
 ```
 sudo apt update
