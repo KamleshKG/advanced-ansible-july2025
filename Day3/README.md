@@ -80,6 +80,7 @@ podman exec <your-container-name> service nginx status
 ansible -i hosts -m shell -a "service nginx status"
 ```
 
+
 ## Lab - Creating a Project in Ansible Automation Platform (AAP)
 GitHub url, use main branch
 <pre>
@@ -87,6 +88,7 @@ https://github.com/tektutor/advanced-ansible-july2025.git
 </pre>
 
 Navigate to AAP Webconsole
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e8d7ffa7-5e50-4e52-b4bc-4d60d0ddb2ca" />
 
 Navigate to Automation Execution --> Projects
 
