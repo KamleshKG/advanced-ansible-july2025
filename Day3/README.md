@@ -222,6 +222,41 @@ Click "Launch template"
 Click on Automation Execution --> Jobs on the left side menu
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/aba5b6a8-b850-407e-aa39-36d7a4f5c113" />
 
+## Lab - Creating Ansible workflow
+Navigate to Automation Execution --> Templates
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/85be4d01-f81f-417a-821a-ef2240d4e53d" />
+Click "Create template" button
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7bb592a6-5622-41a6-84b1-0b94c5ed4f52" />
+Select "Create workflow template"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2b88e20f-63e6-49ea-a544-df46aa9fd5eb" />
+<pre>
+Name - Jegan - Workflow demo
+Organization - Default
+Inventory - Select your inventory from AAP
+</pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e819b037-c383-4bac-a231-13beae1dcf78" />
+Click "Create workflow job template"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1d7abe64-9b4b-4a7c-9f78-376a0abb5510" />
+Click "Add step" button
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2a424d42-5441-42a7-b4f1-bfe26f608973" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bda391b0-74ea-48de-b506-781c412524e8" />
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/126ef2d6-a7c0-4aa3-b86f-038dc25557d2" />
+Click "Finish"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/18a80a90-73a2-4989-80dd-d037790d2c76" />
+Click "Add step"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a6e248de-36bb-4d66-b84f-27b06041eedb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d108b51c-a000-4471-b1f1-8a3600b0ace4" />
+Click "Next"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/82e191af-3b97-498b-9e8c-5d72af2c0bd6" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b1728e62-f946-43ea-84ab-ae76b7bd032a" />
+Click "Finish"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3ce8c5f0-b44e-4ff1-9bb9-f52a7852bc66" />
+Click "Invoke Install Nginx Playbook"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b68be074-b21f-48f5-8f25-ce4d76cd368b" />
+Click "Edit"
+
+
 
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
 ```
