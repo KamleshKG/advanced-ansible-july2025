@@ -223,3 +223,10 @@ ansible_host=localhost
 ansible_private_key_file=~/.ssh/id_ed25519  
 </pre>
 <img width="1242" height="439" alt="image" src="https://github.com/user-attachments/assets/23f7f3bc-ed62-4dc4-8e19-66701d2bfb9f" />
+
+Check if you are able to ping all nodes
+```
+ansible all -m ping
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/be780851-c46e-405d-bae4-278ac0756ec2" />
