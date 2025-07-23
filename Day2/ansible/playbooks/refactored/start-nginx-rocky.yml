@@ -1,0 +1,10 @@
+- name: Check if nginx server is already running in Rocky ansible node
+  shell: curl http://localhost
+  register: output
+  ignore_errors: true
+
+- debug: var=output
+
+- name: Start the nginx service in Rocky ansible node
+  when: output.rc != 0
+  shell: nginx

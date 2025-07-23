@@ -1,0 +1,3 @@
+- name: Restart the nginx service in Rocky ansible node
+  when: output.rc != 0
+  shell: nginx -s stop && nginx
