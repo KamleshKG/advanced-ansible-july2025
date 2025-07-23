@@ -174,3 +174,10 @@ git pull
 cd Day2/ansible/playbooks
 ansible-playbook -i ../inventory install-nginx-playbook.yml 
 ```
+
+If all goes well, you may test it as shown
+```
+podman ps | grep tektutor
+curl http://localhost:<your-container1-port>
+curl http://localhost:<your-container2-port>
+```
