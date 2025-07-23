@@ -6,6 +6,7 @@ sudo apt update
 sudo apt install slapd ldap-utils -y
 ```
 
+
 Configuring LDAP Server
 <pre>
 sudo dpkg-reconfigure slapd  
