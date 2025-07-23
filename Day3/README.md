@@ -37,6 +37,18 @@ Select "Create Project"
 
 
 ## Lab - Creating Credentials in Ansible Automation Platform (AAP)
+Navigate to Automation Execution --> Infrastructure --> Credentials
+
+Click "Create Credential"
+
+Open a terminal
+```
+ls -l ~/.ssh/
+cat ~/.ssh/id_ed25519
+```
+
+## Lab - Creating all 4 hosts in AAP
+
 
 
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
