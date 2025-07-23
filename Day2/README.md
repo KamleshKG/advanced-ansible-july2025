@@ -68,6 +68,9 @@ sudo apt update && sudo apt install ansible
   - DSL is YAML
 </pre>
 
+## Info - Ansible High Level Architecture
+![ansible](AnsibleHighLevelArchitecture.png)
+
 ## Lab - Clone this training repository
 ```
 cd ~
