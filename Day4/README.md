@@ -37,6 +37,10 @@
 - A named collection of one or more AAP nodes (usually execution nodes)
 - Used by job templates, inventories, or organizations to route jobs to specific sets of nodes.
 - A key feature in multi-node AAP deployments
+- Node groups do not manage load balancing
+- AAP automatically selects an available node within the group
+- Jobs won't run if no healthy node exists in the assigned group
+- You can assign default node groups per org or inventory for better management
 - What is the benefit?
   - Job Segmentation
   - Location Awareness
