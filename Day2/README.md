@@ -267,8 +267,10 @@ cd ~/advanced-ansible-july2025
 git pull
 cd Day2/ansible-role
 ansible-galaxy init nginx
-
+ansible-playbook install-nginx-playbook.yml
 ```
 
 Expected output
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/38ca3a5d-c283-4799-abae-28b25f3a5bfb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/534b20ba-f385-4d26-8edd-551e717babd3" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/439519e9-d750-4d0d-b07c-a35ceec490d8" />
