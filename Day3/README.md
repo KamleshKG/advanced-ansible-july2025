@@ -219,6 +219,9 @@ Click "Launch template"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0990ce29-aa0a-4ad4-8b35-f7f22867be4f" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ef4d19bc-1bdd-4804-b7f4-2fc03558519c" />
 
+Click on Automation Execution --> Jobs on the left side menu
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/aba5b6a8-b850-407e-aa39-36d7a4f5c113" />
+
 
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
 ```
