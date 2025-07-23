@@ -141,3 +141,8 @@ done
 
 echo "LDIF file generated: palmeto-ldap-users.ldif"
 ```
+
+Let's add the ldap users now
+```
+ldapadd -x -D "cn=admin,dc=palmeto,dc=org" -W -f palmeto-ldap-users.ldif
+```
