@@ -1,5 +1,17 @@
 # Day 3
 
+## Lab - Getting help about any ansible module
+```
+ansible-doc service
+ansible-doc shell
+ansible-doc apt
+ansible-doc yum
+ansible-doc template
+ansible-doc file
+ansible-doc command
+```
+
+
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
 ```
 sudo apt update
