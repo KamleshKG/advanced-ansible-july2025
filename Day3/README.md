@@ -11,6 +11,11 @@ ansible-doc file
 ansible-doc command
 ```
 
+## Lab - Finding total number of ansible modules supported by your ansible
+```
+ansible-doc -l | wc
+```
+
 
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
 ```
