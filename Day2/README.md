@@ -184,3 +184,27 @@ curl http://localhost:<your-container2-port>
 
 Expected output
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dc337c26-69f1-40b7-8416-f8af18a58e5d" />
+
+## Lab - Conditional installation in ansible playbook
+Let's create couple of rocky ansible node containers
+```
+# List our custom images
+podman images | grep tektutor
+
+# Create two rocky ansible node containers using our custom podman image
+podman run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:1.0
+podman run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:1.0
+
+## List all the running containers
+podman ps
+```
+
+Let's test if SSH works in rocky1 and rocky2
+```
+ssh -p 2003 root@localhost
+exit
+ssh -p 2004 root@localhost
+exit
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2fffb6d0-1454-4f86-b676-a32b1aa01711" />
