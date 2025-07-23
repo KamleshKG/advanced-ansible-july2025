@@ -1,4 +1,4 @@
-# Day 3
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3dbae23f-af87-4903-949a-2852feb3c756" /># Day 3
 
 ## Info - Ansible Automation Platform Overview
 <pre>
@@ -192,6 +192,32 @@ Click "Next"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/24dc49ea-7bcb-4d7f-bd40-63694c0a9ad0" />
 Click "Finish"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b11a4d65-544a-4d56-870a-86583a12e106" />
+
+## Lab - Creating a Job Template to run a playbook from AAP
+Navigate to Automation Execution --> Templates
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bd52aa47-b145-44c1-a8a2-e592d7c72aea" />
+Click "Create template"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4b2faeef-b7c0-471a-804b-b1e6588a53f8" />
+Select "Create job template"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/420f4439-bd78-49eb-8d02-799092116ff0" />
+<pre>
+Name - Invoke Install Nginx Playbook
+Job Type - Run
+Inventory - Select the Inventory you created in AAP
+Project - Select the Project you created in AAP
+Playbook - Day2/ansible/playbooks/refactored/install-nginx-playbook.yml
+Execution environment - Default execution environment
+Credentials - Select the Private key you saved as Credentials in AAP
+</pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9411fd81-30d1-40bb-a3ef-3763093140e3" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/442e44c4-8caf-4c88-981b-74cc043a4e4b" />
+Click "Create job template"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/50353f73-a853-43a9-9979-34ea72e1db58" />
+Click "Launch template"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/75778cca-bc22-4877-93c4-12d6defd16b3" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4b000582-c0b8-4448-8584-f78ff4747673" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0990ce29-aa0a-4ad4-8b35-f7f22867be4f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ef4d19bc-1bdd-4804-b7f4-2fc03558519c" />
 
 
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
