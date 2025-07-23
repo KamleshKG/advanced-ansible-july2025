@@ -89,7 +89,37 @@ LDAP Server details
 <pre>
 Base DN : dc=palmeto,dc=org
 Admin DN: cn=admin,dc=palmeto,dc=org
-User DN	: uid=john,ou=users,dc=palmeto,dc=org
+User DN	: uid=jegan,ou=users,dc=palmeto,dc=org
 Group DN: cn=admins,ou=groups,dc=palmeto,dc=org
 Password: palmeto@123
 </pre>
+
+Script to extract existing linux users and add them as users in LDAP server
+```
+#!/bin/bash
+
+for user in $(ls -l /home | awk '{print $3}' | sort -u); do
+    IFS=':' read -r username _ uid gid full home shell <<< "$(getent passwd $user)"
+    [ -z "$username" ] && continue  # skip if user not found
+
+    cn=$(echo $full | cut -d' ' -f1)
+    sn=$(echo $full | cut -d' ' -f2)
+    pass=$(slappasswd -s password)  # replace with real password or prompt
+
+    cat <<EOF >> bulk-users.ldif
+dn: uid=$username,ou=users,dc=palmeto,dc=org
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: $cn
+sn: $sn
+uid: $username
+uidNumber: $uid
+gidNumber: $gid
+homeDirectory: $home
+loginShell: $shell
+userPassword: $pass
+
+EOF
+done
+```
