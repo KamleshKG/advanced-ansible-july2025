@@ -208,3 +208,18 @@ exit
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2fffb6d0-1454-4f86-b676-a32b1aa01711" />
+
+We need to add the rocky container details in our inventory, the updated inventory should look as shown below
+<pre>
+[all]
+ubuntu1 ansible_port=2001
+ubuntu2 ansible_port=2002
+rocky1  ansible_port=2003
+rocky2  ansible_port=2004
+
+[all:vars]
+ansible_user=root
+ansible_host=localhost
+ansible_private_key_file=~/.ssh/id_ed25519  
+</pre>
+<img width="1242" height="439" alt="image" src="https://github.com/user-attachments/assets/23f7f3bc-ed62-4dc4-8e19-66701d2bfb9f" />
