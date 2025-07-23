@@ -17,6 +17,12 @@ ansible-doc -l | wc
 ```
 
 
+## Lab - Finding the status of service
+```
+podman exec <your-container-name> service nginx status
+ansible -i hosts -m shell -a "service nginx status"
+```
+
 ## Demo - Install OpenLDAP in Ubuntu (Just for your reference, please don't attempt this in our lab environment )
 ```
 sudo apt update
