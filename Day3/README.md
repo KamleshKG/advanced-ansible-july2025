@@ -104,6 +104,8 @@ Click "Create Project"
 Click on "Success"
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a6d28920-0fab-4e6e-b558-40ad8de2d7e1" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/04057f6c-1301-4308-9af7-9994b2d2bdb4" />
+Click on "Projects" on the left side
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/db75cccd-644e-4e7e-b25b-aa0ea9ab3da4" />
 
 
 ## Lab - Creating Credentials in Ansible Automation Platform (AAP)
