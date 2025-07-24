@@ -54,8 +54,11 @@ registry.redhat.io/ansible-automation-platform-2/ee-supported-rhel8:latest
 
 ## Demo - Installed ansible-builder & ansible-runner
 ```
+sudo apt install -y python3-pip python3-ansible-runner
 pip install ansible-runner
-pip install ansible-builder
+pip install ansible-builder --break-system-packages
+pip3 install ansible-dev-tools
+pip3 install https://github.com/ansible/ansible-builder/archive/devel.zip
 
 ansible-runner --version
 ansible-builder --version
@@ -104,8 +107,9 @@ Expected output
 ## Lab - Running your playbook with your custom AAP Execution Environment Image using Podman
 ```
 podman run -it --rm \
+  --net=host \
   -v $PWD:/runner:Z \
-  tektutor/jegan-app-ee:1.0 \
+  tektutor/jegan-aap-ee:1.0 \
   ansible-playbook ping-playbook.yml
 ```
 
@@ -117,7 +121,7 @@ Expected output
 
 Login to Openshift from CLI
 ```
-oc login --token=... --server=https://api.cluster.local:6443
+oc login --token=sha256~mOLbqufkBUEOC8l0OsjUm0BH6E7z57raL0CAgmU16Sc --server=https://api.crc.testing:6443
 ```
 
 Tag your image form Openshift internal registry
