@@ -109,7 +109,7 @@ Expected output
 podman run -it --rm \
   --net=host \
   -v $PWD:/runner:Z \
-  tektutor/jegan-app-ee:1.0 \
+  tektutor/jegan-aap-ee:1.0 \
   ansible-playbook ping-playbook.yml
 ```
 
