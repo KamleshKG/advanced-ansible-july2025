@@ -71,10 +71,15 @@ cd Day4/my-app-execution-env
 tree
 
 ansible-builder create
+
 podman build -f context/Containerfile -t jegan-aap-ee:latest context
 podman run -it jegan-aap-ee:latest bash
 ansible-runner run . -p myplaybook.yml --container-image jegan-aap-ee:latest
 podman tag jegan-aap-ee:latest docker.io/tektutor/jegan-aap-ee:latest
+podman login docker.io
 podman push docker.io/tektutor/jegan-aap-ee:latest
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/90c570ad-649b-416e-ab13-b1f392c3c256" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3ee6d9a3-c641-4af6-b309-0fa0d0744fdd" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c548eaa-e70d-4ce1-8c9a-3b32f3ca2256" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/062939bc-0953-4427-af6d-c568ce53a86a" />
