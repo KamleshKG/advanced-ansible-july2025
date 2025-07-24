@@ -112,3 +112,48 @@ podman run -it --rm \
 Expected output
 <img width="1942" height="717" alt="image" src="https://github.com/user-attachments/assets/064bb229-80a1-4b79-b0e4-39c7db057012" />
 <img width="1942" height="997" alt="image" src="https://github.com/user-attachments/assets/2fa65468-85ce-4c8f-ac87-12693be057c2" />
+
+## Lab - Using Custom AAP EE Image in Ansible Automation Platform running within Openshift
+
+Login to Openshift from CLI
+```
+oc login --token=... --server=https://api.cluster.local:6443
+```
+
+Tag your image form Openshift internal registry
+```
+# Get the internal image registry route (for OpenShift 4.x+)
+REGISTRY=$(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')
+
+# Tag your image to match the OpenShift internal registry path
+podman tag tektutor/jegan-aap-ee:1.0 $REGISTRY/aap/jegan-aap-ee:1.0
+```
+
+Login to Openshift internal registry using Podman
+```
+podman login -u $(oc whoami) -p $(oc whoami -t) $REGISTRY
+```
+
+Push the image into Openshift Internal image registry
+```
+podman push $REGISTRY/aap/jegan-aap-ee:1.0
+```
+
+Grant image pull permission
+```
+oc policy add-role-to-user system:image-puller \
+  system:serviceaccount:aap:default \
+  --namespace=aap
+```
+
+Open the AAP webconsole, Navigate to Templates --> Add --> Job Template --> 
+Set the below
+<pre>
+Inventory
+
+Project
+    
+Playbook
+    
+Execution Environment: Select Jegan AAP EE    
+</pre>
