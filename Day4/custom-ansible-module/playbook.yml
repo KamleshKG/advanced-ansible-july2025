@@ -1,5 +1,5 @@
 - name: This playbook demonstrates invoking our custom ansible module
-  hosts: localhost
+  hosts: rocky 
   tasks:
   - name: Invoke custom ansible module
     hello: message="Advanced Ansible"
