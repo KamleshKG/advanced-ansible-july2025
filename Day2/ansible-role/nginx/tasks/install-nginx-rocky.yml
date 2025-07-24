@@ -1,0 +1,6 @@
+- name: Install Extra Packages for Enterprise Linux 
+  yum: name=epel-release state=latest
+
+- name: Install nginx web server in Rocky ansible node
+  yum: name=nginx state=latest
+

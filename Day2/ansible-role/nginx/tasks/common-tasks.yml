@@ -1,0 +1,9 @@
+- name: Create a custom folder so that nginx can serve web pages from our folder
+  file: path=/var/html mode=0777 state=directory
+
+- name: Retreive IP address
+  shell: hostname -i
+  register: ipaddress
+
+- name: Deploy custom web page
+  template: src=index.html.j2 dest=/var/html/index.html
