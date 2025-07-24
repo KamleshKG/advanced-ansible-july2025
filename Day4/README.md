@@ -110,6 +110,5 @@ podman run -it --rm \
 ```
 
 Expected output
-
-<img width="1942" height="997" alt="image" src="https://github.com/user-attachments/assets/2fa65468-85ce-4c8f-ac87-12693be057c2" />
 <img width="1942" height="717" alt="image" src="https://github.com/user-attachments/assets/064bb229-80a1-4b79-b0e4-39c7db057012" />
+<img width="1942" height="997" alt="image" src="https://github.com/user-attachments/assets/2fa65468-85ce-4c8f-ac87-12693be057c2" />
