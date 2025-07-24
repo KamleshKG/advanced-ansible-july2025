@@ -65,13 +65,16 @@ ansible-builder --version
 
 ## Lab - Build your custom Ansible Automation Platform Execution Environment
 ```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day4/my-app-execution-env
+tree
+
 ansible-builder create
-podman build -f context/Dockerfile -t jegan-aap-ee:latest context
+podman build -f context/Containerfile -t jegan-aap-ee:latest context
 podman run -it jegan-aap-ee:latest bash
 ansible-runner run . -p myplaybook.yml --container-image jegan-aap-ee:latest
 podman tag jegan-aap-ee:latest docker.io/tektutor/jegan-aap-ee:latest
 podman push docker.io/tektutor/jegan-aap-ee:latest
 ```
-<img width="1718" height="829" alt="image" src="https://github.com/user-attachments/assets/f3b2cb47-bd73-4260-a359-908a7175e788" />
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4652e4b7-ec47-4963-a1e3-8a782ea634f8" />
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/545cd055-19c6-45ac-8916-3d9d9668c79f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/90c570ad-649b-416e-ab13-b1f392c3c256" />
