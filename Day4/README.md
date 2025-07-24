@@ -121,7 +121,7 @@ Expected output
 
 Login to Openshift from CLI
 ```
-oc login --token=... --server=https://api.cluster.local:6443
+oc login --token=sha256~mOLbqufkBUEOC8l0OsjUm0BH6E7z57raL0CAgmU16Sc --server=https://api.crc.testing:6443
 ```
 
 Tag your image form Openshift internal registry
