@@ -240,3 +240,37 @@ ansible-playbook install-nginx-playbook.yml
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/13c93b8e-f784-4da0-ae5d-5331d0941acc" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/efed7c30-5a32-4d25-954c-c22528f9adc4" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/38b7721f-33ec-4c2a-b40e-584207cb93d7" />
+
+## Lab - Running the refactored playbook
+```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day2/ansible/playbooks/refactored
+ansible-playbook install-nginx-playbook.yml 
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/36d3b0c5-68c9-457f-8fca-c2b22a530059" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1ddfb127-3399-43b1-aedf-ac091f83dfaf" />
+
+## Info - Ansible Role Overview
+<pre>
+- is a reusable code like dynamic link library(dll or .so )
+- just like we won't be able to run a dll directly, we can't run the ansible role directly
+- ansible role(s) can be invoked from ansible playbooks
+- ansible follows ansible recommended directory structure
+- ansible roles can be reused by many playbook within your organization
+</pre>
+
+## Lab - Let's create a nginx role that supports ubuntu and rocky
+```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day2/ansible-role
+ansible-galaxy init nginx
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/38ca3a5d-c283-4799-abae-28b25f3a5bfb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/534b20ba-f385-4d26-8edd-551e717babd3" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/439519e9-d750-4d0d-b07c-a35ceec490d8" />
