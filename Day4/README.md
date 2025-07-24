@@ -47,3 +47,15 @@
   - Tenant Isolation
   - Scalability & Load Distribution
 </pre>
+
+## Demo - Installed ansible-builder & ansible-runner
+```
+pip install ansible-runner
+pip install ansible-builder
+
+ansible-runner --version
+ansible-builder --version
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8a9fad37-b499-4d76-827a-021974877cf1" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/55ed26af-bc31-4793-87ae-6b6c968dff4b" />
+
