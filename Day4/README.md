@@ -107,6 +107,7 @@ Expected output
 ## Lab - Running your playbook with your custom AAP Execution Environment Image using Podman
 ```
 podman run -it --rm \
+  --net=host \
   -v $PWD:/runner:Z \
   tektutor/jegan-app-ee:1.0 \
   ansible-playbook ping-playbook.yml
