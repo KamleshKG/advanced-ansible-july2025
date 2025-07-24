@@ -1,0 +1,16 @@
+
+PLAY [This playbooks will test if ansible is able to reach out to the ansible nodes] ***
+
+TASK [Gathering Facts] *********************************************************
+[1;35mcore/2.18/reference_appendices/interpreter_discovery.html for more information.[0m
+[0;32mok: [ubuntu2][0m
+[1;35mcore/2.18/reference_appendices/interpreter_discovery.html for more information.[0m
+[0;32mok: [ubuntu1][0m
+
+TASK [Ping ansible nodes] ******************************************************
+[0;32mok: [ubuntu2][0m
+[0;32mok: [ubuntu1][0m
+
+PLAY RECAP *********************************************************************
+[0;32mubuntu1[0m                    : [0;32mok=2   [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+[0;32mubuntu2[0m                    : [0;32mok=2   [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
