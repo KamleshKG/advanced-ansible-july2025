@@ -1,0 +1,8 @@
+- name: This playbook demonstrates invoking our custom ansible module
+  hosts: localhost
+  tasks:
+  - name: Invoke custom ansible module
+    hello: message="Advanced Ansible"
+    register: output
+
+  - debug: var=output

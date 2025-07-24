@@ -1,1 +1,0 @@
-{"event": "verbose", "uuid": "1de5a1f2-da84-4eac-b366-f484deba6218", "counter": 6, "stdout": "\u001b[1;35m[WARNING]: Platform linux on host ubuntu2 is using the discovered Python\u001b[0m", "start_line": 4, "end_line": 5, "runner_ident": "8ab6e74d-9c4e-4cac-b09b-b7ed5ec86035", "created": "2025-07-24T02:10:07.718749+00:00"}
