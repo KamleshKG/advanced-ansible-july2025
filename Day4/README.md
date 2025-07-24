@@ -54,8 +54,9 @@ registry.redhat.io/ansible-automation-platform-2/ee-supported-rhel8:latest
 
 ## Demo - Installed ansible-builder & ansible-runner
 ```
+sudo apt install -y python3-pip python3-ansible-runner
 pip install ansible-runner
-pip install ansible-builder
+pip install ansible-builder --break-system-packages
 
 ansible-runner --version
 ansible-builder --version
