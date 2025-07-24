@@ -84,3 +84,29 @@ podman push docker.io/tektutor/jegan-aap-ee:latest
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3ee6d9a3-c641-4af6-b309-0fa0d0744fdd" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c548eaa-e70d-4ce1-8c9a-3b32f3ca2256" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/062939bc-0953-4427-af6d-c568ce53a86a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c6e46284-d5d8-4c42-97ac-623aad35ba9d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4905d9ab-c08b-4339-89f0-43661867e5ee" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c8aac32c-7f61-499d-af09-65509265463d" />
+
+## Lab - Running your playbook with your custom AAP Execution Environment Image locally
+```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day4/my-app-execution-env
+tree
+
+ansible-runner run . -p ping-playbook.yml --container-image tektutor/jegan-app-ee:1.0
+```
+
+Expected output
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0f633327-ecdc-42b6-aedf-612c8c253ca6" />
+
+## Lab - Running your playbook with your custom AAP Execution Environment Image using Podman
+```
+podman run -it --rm \
+  -v $PWD:/runner:Z \
+  tektutor/jegan-app-ee:1.0 \
+  ansible-playbook ping-playbook.yml
+```
+
+Expected output
