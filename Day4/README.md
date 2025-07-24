@@ -1,4 +1,8 @@
 # Day 4
+## Info - AAP Default Execution Environment
+<pre>
+registry.redhat.io/ansible-automation-platform-2/ee-supported-rhel8:latest    
+</pre>    
 
 ## Info - Ansible Automation Platform - Control Node Overview
 <pre>
