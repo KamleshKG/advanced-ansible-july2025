@@ -100,3 +100,13 @@ ansible-runner run . -p ping-playbook.yml --container-image tektutor/jegan-app-e
 
 Expected output
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0f633327-ecdc-42b6-aedf-612c8c253ca6" />
+
+## Lab - Running your playbook with your custom AAP Execution Environment Image using Podman
+```
+podman run -it --rm \
+  -v $PWD:/runner:Z \
+  tektutor/jegan-app-ee:1.0 \
+  ansible-playbook ping-playbook.yml
+```
+
+Expected output
