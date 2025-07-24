@@ -65,6 +65,12 @@ ansible-builder --version
 
 ## Lab - Build your custom Ansible Automation Platform Execution Environment
 ```
+ansible-builder create
+podman build -f context/Dockerfile -t jegan-aap-ee:latest context
+podman run -it jegan-app-ee:latest bash
+ansible-runner run . -p myplaybook.yml --container-image my-ee:latest
+podman tag my-ee:latest registry.example.com/ansible/my-ee:latest
+podman push registry.example.com/ansible/my-ee:latest
 ```
 <img width="1718" height="829" alt="image" src="https://github.com/user-attachments/assets/f3b2cb47-bd73-4260-a359-908a7175e788" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4652e4b7-ec47-4963-a1e3-8a782ea634f8" />
