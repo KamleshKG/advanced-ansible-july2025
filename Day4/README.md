@@ -63,3 +63,9 @@ ansible-builder --version
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8a9fad37-b499-4d76-827a-021974877cf1" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/55ed26af-bc31-4793-87ae-6b6c968dff4b" />
 
+## Lab - Build your custom Ansible Automation Platform Execution Environment
+```
+```
+<img width="1718" height="829" alt="image" src="https://github.com/user-attachments/assets/f3b2cb47-bd73-4260-a359-908a7175e788" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4652e4b7-ec47-4963-a1e3-8a782ea634f8" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/545cd055-19c6-45ac-8916-3d9d9668c79f" />
