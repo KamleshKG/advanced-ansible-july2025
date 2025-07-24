@@ -135,12 +135,12 @@ podman tag tektutor/jegan-aap-ee:1.0 $REGISTRY/aap/jegan-aap-ee:1.0
 
 Login to Openshift internal registry using Podman
 ```
-podman login -u $(oc whoami) -p $(oc whoami -t) $REGISTRY
+podman login -u $(oc whoami) -p $(oc whoami -t) $REGISTRY --tls-verify=false
 ```
 
 Push the image into Openshift Internal image registry
 ```
-podman push $REGISTRY/aap/jegan-aap-ee:1.0
+podman push $REGISTRY/aap/jegan-aap-ee:1.0 --tls-verify=false
 ```
 
 Grant image pull permission
@@ -161,3 +161,16 @@ Playbook
     
 Execution Environment: Select Jegan AAP EE    
 </pre>
+
+
+## Lab - Writing a custom ansible module and invoking it from your playbook
+```
+cd ~/advanced-ansible-july2025
+git pull
+cd Day4/custom-ansible-module
+tree
+
+ansible-playbook playbook.yml
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1091cd0e-a80c-4f3e-96df-d0f708b7efc1" />
