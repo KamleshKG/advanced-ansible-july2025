@@ -46,4 +46,30 @@ Navigate to keycload admin console
 http://localhost:8080  
 </pre>
 
-Select 
+keycloak combo box on the left side, click on "Create realm" button
+<pre>
+realm name:  aap-realm 
+</pre>
+Click "Create" button
+
+On the left side menu, at the bottom you will see "User fedaration" click that
+
+On the center of the screen, click on "Add Ldap providers"
+We need to type in the below details
+<pre>
+Edit Mode: READ_ONLY (or WRITABLE)
+
+Vendor: Other / OpenLDAP
+
+Connection URL: ldap://<your-ldap-server>:389
+
+Bind DN: cn=admin,dc=palmeto,dc=org
+
+Bind Credential: palmeto@123
+
+Users DN: ou=users,dc=palmeto,dc=org
+
+Username LDAP attribute: uid
+
+RDN LDAP attribute: uid  
+</pre>
