@@ -57,19 +57,23 @@ On the left side menu, at the bottom you will see "User fedaration" click that
 On the center of the screen, click on "Add Ldap providers"
 We need to type in the below details
 <pre>
-Edit Mode: READ_ONLY (or WRITABLE)
-
-Vendor: Other / OpenLDAP
-
-Connection URL: ldap://<your-ldap-server>:389
-
+UI Display name: jegan-ldap
+Vendor: Other ( as we don't see OpenLDAP there )
+Under "Connection and authentication settings"
+Connection URL: ldap://192.168.10.200:389
 Bind DN: cn=admin,dc=palmeto,dc=org
-
 Bind Credential: palmeto@123
-
 Users DN: ou=users,dc=palmeto,dc=org
-
 Username LDAP attribute: uid
-
 RDN LDAP attribute: uid  
 </pre>
+
+#### Enabling MFA with keycloak
+In Keycloak webconsole, navigate to Authentication --> Flows --> Copy "Browse" Flow
+Name it Browser + MFA
+Need to add a new step, Actions --> Add Execution
+Choose OTP Form
+Set requirement to Required
+
+Go to Authentications --> Bindings
+Set Browser Flow to Browser + MFA
