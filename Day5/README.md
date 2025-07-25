@@ -306,6 +306,19 @@ Name it Browser + MFA
 Need to add a new step, Actions --> Add Execution
 Choose OTP Form
 Set requirement to Required
-
 Go to Authentications --> Bindings
 Set Browser Flow to Browser + MFA
+
+## Info - Ansible Collection
+<pre>
+- a package of
+  - Playbooks
+  - Roles
+  - Modules
+  - Plugins
+</pre>
+
+Ansible Collection follows a standard folder structure
+<pre>
+    
+</pre>
