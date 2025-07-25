@@ -178,7 +178,7 @@ LDAP Server URI: ldap://ldap.palmeto.org
 StartTLS: false
 Bind DN: cn=admin,dc=palmeto,dc=org
 Bind Password: palmeto@123
-User Search Base: ou=People,dc=palmeto,dc=org
+User Search Base: ou=users,dc=palmeto,dc=org
 User Search Filter: (uid=%(user)s)
 Group Search Base: ou=Groups,dc=palmeto,dc=org
 Group Object Class: groupOfNames
