@@ -1,4 +1,4 @@
--++++++++++++++++++++# Day 5
+# Day 5
 
 ## Lab - Setting up MFA with LDAP in Ansible Automation Platform
 
