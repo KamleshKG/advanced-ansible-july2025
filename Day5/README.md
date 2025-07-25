@@ -190,7 +190,11 @@ User DN Template: uid=%(user)s,ou=People,dc=palmeto,dc=org
 
 Test Login
 ```
-oc logs deployment/automationcontroller -n aap
+ldapsearch -x \
+> -D "uid=jegan,ou=users,dc=palmeto,dc=org" \
+> -w "palmeto@123" \
+> -b "dc=palmeto,dc=org" \
+> "(uid=jegan)"
 ```
 
 
