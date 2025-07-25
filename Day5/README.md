@@ -1,6 +1,6 @@
-# Day 5
+-++++++++++++++++++++# Day 5
 
-## Lab - Setting  MFA with LDAP in Ansible Automation Platform
+## Lab - Setting up MFA with LDAP in Ansible Automation Platform
 
 #### Let's create a Keycloak Podman container
 ```
@@ -23,7 +23,7 @@ username: admin
 password: admin
 </pre>
 
-#### Let's create a LDAP Server
+#### Let's create a LDAP Server ( This can be skipped as we already installed OpenLDAP in our lab servers )
 
 ```
 podman run --name my-openldap -d \
