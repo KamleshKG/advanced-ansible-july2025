@@ -68,6 +68,18 @@ sudo apt update && sudo apt install ansible
   - DSL is YAML
 </pre>
 
+## Info - Ansible Config File (ansible.cfg) 
+<pre>
+- Ansible default behaviour could be altered by configuring ansible.cfg file
+- Ansible locates the ansible.cfg in the below order
+  1. ANSIBLE_CONFIG environment if exported ( e.g export ANSIBLE_CONFIG=/home/jegan/myansible-projects/ansible.cfg )
+  2. In case, ANSIBLE_CONFIG environment variable isn't defined, then it searches the ansible.cfg in the current directory
+  3. In case, ansible.cfg isn't found in current directly then it searches in your home directory ~/.ansible.cfg
+  4. In case, ansible.cfg isn't found in your home directory as well, then it finally looks at /etc/ansible/ansible.cfg file
+- wherever ansible locates the ansible.cfg file first it picks that and stops searching for ansible.cfg 
+- one could verify from where ansible is picking the ansible.cfg by enabling the verbosity while running ad-hoc or ansible playbooks by add -vvvvv
+</pre>
+
 ## Info - Ansible High Level Architecture
 ![ansible](AnsibleHighLevelArchitecture.png)
 
